@@ -1,6 +1,6 @@
-package com.edlocity.springboot_stomp_chatapplication.configurations.controllers;
+package com.learning.springboot_stomp_chatapplication.configurations.controllers;
 
-import com.edlocity.springboot_stomp_chatapplication.configurations.models.ChatMessage;
+import com.learning.springboot_stomp_chatapplication.configurations.models.ChatMessage;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;

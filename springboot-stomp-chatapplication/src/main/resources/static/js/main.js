@@ -23,7 +23,7 @@ function connect(event) {
         usernamePage.classList.add('hidden');
         chatPage.classList.remove('hidden');
 
-        var socket = new SockJS('/edlocity-stomp-endpoint');
+        var socket = new SockJS('/stomp-endpoint');
         stompClient = Stomp.over(socket);
 
         stompClient.connect({}, onConnected, onError);
@@ -71,7 +71,6 @@ function send(event) {
 
 function onMessageReceived(payload) {
     var message = JSON.parse(payload.body);
-
     var messageElement = document.createElement('li');
 
     if(message.messageType === 'JOIN') {
@@ -95,15 +94,25 @@ function onMessageReceived(payload) {
         usernameElement.appendChild(usernameText);
         messageElement.appendChild(usernameElement);
     }
-
+    messageArea.appendChild(messageElement);
     var textElement = document.createElement('p');
-    var messageText = document.createTextNode(message.content);
-    textElement.appendChild(messageText);
-
     messageElement.appendChild(textElement);
 
-    messageArea.appendChild(messageElement);
+    typeMessage(message.content, textElement);
     messageArea.scrollTop = messageArea.scrollHeight;
+}
+
+function typeMessage(messageText, textElement) {
+    var i = 0;
+    var messageContent = message.content;
+    console.log(messageContent);
+//    var messageLength = messageContent.length;
+
+//    if (i < messageLength) {
+        textElement.innerHTML += messageContent[i];
+        i++;
+//        setTimeout(typeMessage, 200);
+//    }
 }
 
 

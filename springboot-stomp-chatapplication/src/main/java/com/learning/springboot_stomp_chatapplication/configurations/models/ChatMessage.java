@@ -1,4 +1,4 @@
-package com.edlocity.springboot_stomp_chatapplication.configurations.models;
+package com.learning.springboot_stomp_chatapplication.configurations.models;
 
 import lombok.Data;
 

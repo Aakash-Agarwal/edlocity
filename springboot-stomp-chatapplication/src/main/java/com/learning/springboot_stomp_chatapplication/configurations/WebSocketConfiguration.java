@@ -1,4 +1,4 @@
-package com.edlocity.springboot_stomp_chatapplication.configurations;
+package com.learning.springboot_stomp_chatapplication.configurations;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
@@ -11,7 +11,7 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 public class WebSocketConfiguration implements WebSocketMessageBrokerConfigurer {
     @Override
     public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/edlocity-stomp-endpoint").withSockJS();
+        registry.addEndpoint("/stomp-endpoint").withSockJS();
     }
 
     @Override

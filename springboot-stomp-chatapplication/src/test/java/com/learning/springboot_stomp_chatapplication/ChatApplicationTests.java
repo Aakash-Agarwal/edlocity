@@ -1,4 +1,4 @@
-package com.edlocity.springboot_stomp_chatapplication;
+package com.learning.springboot_stomp_chatapplication;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
